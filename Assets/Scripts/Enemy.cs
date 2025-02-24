@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("atacando");
+        Debug.Log("chanclazo de madre");
         currentState = EnemyState.Chasing;
     }
 
