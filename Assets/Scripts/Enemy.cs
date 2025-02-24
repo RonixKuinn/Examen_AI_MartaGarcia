@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     {
         Patrulla,
         Persigue,
-        Ataca.
+        Ataca:
     }
     public EnemyState currentState;
     private NavMeshAgent _AIAgent;
@@ -22,9 +22,20 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-
+        _AIAgent = GetComponent<NavMeshAgent>();
+        _playerTransform = GetComponent<Transform>();
     }
 
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+
+    }
+        
     void Patrullage()
     {
 
@@ -39,7 +50,7 @@ public class Enemy : MonoBehaviour
     {
 
     }
-    
+
     void Start()
     {
         
@@ -49,8 +60,8 @@ public class Enemy : MonoBehaviour
     {
         
     }
-}
 
+}
 
 
 
