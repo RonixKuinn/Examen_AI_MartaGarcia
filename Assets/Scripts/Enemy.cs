@@ -6,12 +6,13 @@ public class Enemy : MonoBehaviour
 {
     public enum EnemyState
     {
-        Patrulla,
-        Persigue,
-        Ataca:
+        Patrolling,
+        Chasing,
+        Attacking
+
     }
     public EnemyState currentState;
-    private NavMeshAgent _AIAgent;
+    private UnityEngine.AI.NavMeshAgent _AIAgent;
 
     [SerializeField] private Transform[] _patrolPoints;
     private int _patrolIndex;
@@ -22,79 +23,7 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-        _AIAgent = GetComponent<NavMeshAgent>();
-        _playerTransform = GetComponent<Transform>();
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
-        
-    void Patrullage()
-    {
-
-    }
-
-    void Persiguiendo()
-    {
-
-    }
-
-    void Atacando()
-    {
-
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-    [SerializeField] private Transform[] _patrolPoints;
-    private int _patrolIndex;
-
-    private Transform _playerTransform;
-    [SerializeField] private float _visionRange = 15;
-    [SerializeField] private float _attackRange = 3;
-
-    void Awake()
-    {
-        _AIAgent = GetComponent<NavMeshAgent>();
+        _AIAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _playerTransform = GameObject.FindWithTag("Player").transform;
     }
 
@@ -161,3 +90,5 @@ public class Enemy : MonoBehaviour
         Debug.Log("atacando");
         currentState = EnemyState.Chasing;
     }
+
+}
